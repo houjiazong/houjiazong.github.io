@@ -1,0 +1,28 @@
+{
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "search.useIgnoreFiles": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/*.meta": true,
+    "**/bower_components": true,
+    "**/dist": false,
+    "**/site": true,
+    "library/": true,
+    "local/": true,
+    "temp/": true
+  },
+  "search.exclude": {
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "build/": true
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}

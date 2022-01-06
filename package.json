@@ -1,0 +1,18 @@
+{
+  "name": "houjiazong.github.io",
+  "version": "1.0.0",
+  "description": "M's blog",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "main": "index.js",
+  "author": "houjiazong",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.5",
+    "vuepress-plugin-autobar": "github:boboidream/vuepress-bar",
+    "vuepress-plugin-permalink-pinyin": "^1.0.0",
+    "vuepress-plugin-rpurl": "github:boboidream/vuepress-plugin-rpurl"
+  }
+}
