@@ -128,7 +128,7 @@ export default {
       const colNum = l2Idx + 1
       let d = 0
       if (!(rowNum === 1 && colNum === 1)) {
-        d = ((rowNum * colNum) - 1) * (0.2 - 0.12)
+        d = (((rowNum * colNum) - 1) * 0.05).toFixed(2)
       }
       return {
         'animation-delay': `${d}s`,
@@ -170,7 +170,7 @@ export default {
   height: 80%
   width: 80%
   cursor: pointer
-  animation: fadeIn .2s linear
+  animation: fadeIn .4s linear
   animation-fill-mode: both
   .m_guide-menu-icon
     position relative
@@ -211,10 +211,6 @@ export default {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: scale(.1);
-  }
-  50% {
-    opacity: 0.6;
     transform: scale(1.2);
   }
   100% {
