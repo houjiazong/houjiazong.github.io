@@ -1,3 +1,9 @@
+---
+title: koa-compose解读
+---
+
+# koa-compose解读
+
 > compose 是一个工具函数，Koa.js 的中间件通过这个工具函数组合后，按 app.use() 的顺序同步执行，也就是形成了 洋葱圈 式的调用，源码地址[https://github.com/koajs/compose/blob/master/index.js](https://github.com/koajs/compose/blob/master/index.js)
 
 ## 实现一个简单版的递归洋葱模型

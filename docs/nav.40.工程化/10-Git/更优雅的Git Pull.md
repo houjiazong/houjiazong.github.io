@@ -1,3 +1,7 @@
+---
+title: 更优雅的Git Pull
+---
+# 更优雅的Git Pull
 ## 1）更新remote tracking branches（比如origin/master）
 ```
 git remote update -p
