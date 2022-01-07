@@ -6,7 +6,7 @@
         <div :key="idx" class="m_guide-menu-list">
           <template v-for="(menu, menuIdx) of item">
             <div :key="menuIdx" ref="menu" class="m_guide-menu" :style="{ width: menuWidth, height: `${menuHeight}px` }">
-              <div class="m_guid-menu-inner" @click="onMenuClick(menu)">
+              <div class="m_guid-menu-inner" @click="onMenuClick(menu)" :style="getMenuInnerStyles(idx, menuIdx)">
                 <div class="m_guide-menu-icon">
                   <img :src="menu.icon" />
                 </div>
@@ -121,6 +121,22 @@ export default {
     onMenuClick (item) {
       this.$router.push(item.path)
     },
+    getMenuInnerStyles (l1Idx, l2Idx) {
+      // 1,1 1,2 1,3 1,4 1,5
+      // 2,1 2,2 2,3 2,4 2,5
+      const rowNum = l1Idx + 1
+      const colNum = l2Idx + 1
+      let d = 0
+      if (!(rowNum === 1 && colNum === 1)) {
+        d = ((rowNum * colNum) - 1) * (0.2 - 0.12)
+      }
+      return {
+        'animation-delay': `${d}s`,
+        '-webkit-animation-delay': `${d}s`,
+        '-mz-animation-delay': `${d}s`,
+        '-o-animation-delay': `${d}s`,
+      }
+    },
   },
 }
 </script>
@@ -154,6 +170,8 @@ export default {
   height: 80%
   width: 80%
   cursor: pointer
+  animation: fadeIn .2s linear
+  animation-fill-mode: both
   .m_guide-menu-icon
     position relative
     width: 70%
@@ -190,4 +208,18 @@ export default {
       &:after
         background-color: rgba(0, 0, 0, .3);
         transition: none;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 </style>
