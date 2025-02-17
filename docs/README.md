@@ -5,8 +5,8 @@ sidebar: false
 <div class="m_home-wrapper">
   <h1 class="m_home-title">Hello.</h1>
   <p class="m_home-desc" style="font-size: 2.2em; font-weight: 500;">我是M.</p>
-  <p class="m_home-desc">希望我的内容可以帮助到你.<MLink><router-link to="/guide">前去查看</router-link></MLink></p>
-  <p class="m_home-desc">你也可以通过我的<MLink target="_blank" href="https://github.com/houjiazong">Github</MLink>找到我.</p>
+<!--   <p class="m_home-desc">希望我的内容可以帮助到你.<MLink><router-link to="/guide">前去查看</router-link></MLink></p> -->
+  <p class="m_home-desc">你可以通过我的<MLink target="_blank" href="https://github.com/houjiazong">Github</MLink>找到我.</p>
 </div>
 
 <style lang="stylus" scoped>
